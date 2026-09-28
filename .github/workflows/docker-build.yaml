@@ -123,10 +123,10 @@ jobs:
     strategy:
       matrix:
         arch:
-          - i386
+          # - i386
           - amd64
-          - armv7
-          - arm64
+          # - armv7
+          # - arm64
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -214,10 +214,10 @@ jobs:
     strategy:
       matrix:
         arch:
-          - i386
+          # - i386
           - amd64
-          - armv7
-          - arm64
+          # - armv7
+          # - arm64
         registry:
           - {
             url: "https://index.docker.io/v1/",
