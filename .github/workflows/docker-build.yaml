@@ -1,6 +1,7 @@
 name: Docker Build
 
 on:
+  workflow_dispatch:
   push:
   pull_request:
   schedule:
@@ -8,6 +9,7 @@ on:
 
 jobs:
   getversion:
+    if: github.actor == 'quadnegative'
     runs-on: ubuntu-latest
     name: Obtain ZoneMinder Version
     outputs:
