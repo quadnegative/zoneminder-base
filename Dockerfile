@@ -128,6 +128,7 @@ RUN --mount=type=bind,target=/tmp/runtime-deps.deb,source=/packages/runtime-deps
     && apt-get update \
     && apt-get install -y --no-install-recommends \
         ./tmp/runtime-deps.deb \
+    && apt-get install -y --no-install-recommends libcurl3-gnutls \
     && rm -rf /var/lib/apt/lists/*
 
 # Remove "zoneminder" shim package from runtime-deps.deb and
